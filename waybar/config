@@ -136,8 +136,11 @@
         "exec": "python3 ~/.config/waybar/scripts/spotify.py --player spotify",
         "format": "{}",
         "return-type": "json"
-    }
-
-
+    },
+    
+        "reload_style_on_change": true,
+        
+        }
+    
 
 }
