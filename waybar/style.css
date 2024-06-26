@@ -1,14 +1,18 @@
+@import "/home/tatu/.cache/wal/colors-waybar.css";
+
+
 * {
   font-family: Material Design Icons, JetBrainsMono Nerd Font, Iosevka Nerd Font;
   font-size: 17px;
+  
 }
 
 window#waybar {
-  background-color: #242933;
+  background-color: #311f1f;
   color: #ffffff;
   border-radius: 8px;
   border-width: 3px;
-  border-color: #b072d1;
+  border-color: @color3;
   border-style: solid;
 }
 
@@ -17,7 +21,7 @@ window#waybar.hidden {
 }
 
 #window {
-  color: #64727d;
+  color:@color14;
 }
 
 #workspaces,
@@ -37,12 +41,12 @@ window#waybar.hidden {
 
 
 #cpu {
-  color: #fa9f8e;
+  color: #ffffff;
   border-radius: 8px 8px 8px 8px;
 }
 
 #memory {
-  color: #b9fac2;
+  color: #ffffff;
   border-radius: 8px 8px 8px 8px;
 }
 
@@ -53,25 +57,25 @@ window#waybar.hidden {
 
 #workspaces button {
 	border: none;
-	color:  #d4d2a9;
+	color:  #ffffff;
 	padding: 3px;
 	background: transparent;
 	box-shadow: none;
 }
 
 #workspaces button.active {
-	color:  #81A1C1;
+	color:  #7f7f7f;
 	background: radial-gradient(circle, rgba(20, 48, 187, 0.699) 5%, rgba(36, 39, 54, 0.5) 18%, rgba(132,129,156,0) 23%, rgba(70, 76, 98, 0.201) 24%, rgba(132,129,156,0) 30%);
 	animation: button_activate .2s ease-in-out;
 }
 
 #workspaces button.urgent {
-	color:  #fa9f8e;	
+	color:  #ffffff;	
 	background: radial-gradient(circle, rgba(25, 79, 255, 0.3) 20%, rgba(132,129,156,0) 30%);
 }
 
 #workspaces button.persistent {
-	color:  #85909e;
+	color:  #ffffff;
 }
 
 #workspaces button:hover {
@@ -109,7 +113,7 @@ window#waybar.hidden {
 #pulseaudio,
 #tray,
 #network {
-  background-color: #3b4252;
+  background-color: @color10;
   padding: 0em 2em;
 
   font-size: 20px;
@@ -142,8 +146,7 @@ window#waybar.hidden {
   margin-right: 10px;
   margin-bottom: 10px;
   border-radius: 9px 9px 9px 9px;
-  border: 2px solid #3b4252;
-  background-color: #3b4252;
+  background-color: @color10;
 }
 
 
@@ -308,7 +311,7 @@ label:focus {
 #custom-spotify,
 #custom-next,
 #custom-pre {
-  background-color: #3b4252;
+  background-color: @color10;
   font-size: 20px;
   padding-right: 6.5px;
   margin-top: 10px;
