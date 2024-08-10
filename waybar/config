@@ -10,22 +10,24 @@
     "modules-center": ["custom/song_name", "custom/pre", "custom/spotify", "custom/next"],
     "modules-right": ["tray", "network", "pulseaudio", "clock", "hyprland/language"],
     
-    "hyprland/workspaces": {
-        "on-click": "activate",
-        "format": "{icon}",
-        "format-icons": {
-            "default": "",
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "active": "󱓻",
-            "urgent": "󱓻"
-        },
-        "persistent_workspaces": {
-            "*": 4
-        }
+   "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+        "default": "",
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "active": "󱓻",
+        "urgent": "󱓻"
     },
+       "persistent-workspaces": {
+             "*": 5, // 5 workspaces by default on every monitor
+             "HDMI-A-1": 4 // but only three on HDMI-A-1
+       }
+},
+        
     "hyprland/language": {
         "format": "{}",
         "format-en": "en",
