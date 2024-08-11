@@ -1,0 +1,107 @@
+
+/* ---- Load pywal colors (custom wal template) ---- */
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+* {
+    font: "Figtree 13";
+    g-spacing: 10px;
+    g-margin: 0;
+    b-color: @background; /* Основной цвет фона */
+    fg-color: @foreground; /* Цвет текста */
+    fgp-color: #888888FF; /* Цвет подсказки */
+    b-radius: 8px;
+    g-padding: 8px;
+    hl-color: @selected-normal-background; /* Цвет выделенного элемента */
+    hlt-color: @selected-normal-foreground; /* Цвет текста выделенного элемента */
+    alt-color: @background; /* Цвет альтернативного фона */
+    wbg-color: @background; /* Цвет фона окна */
+    w-border: 2px solid;
+    w-border-color: @border-color; /* Цвет границы окна */
+    w-padding: 12px;
+}
+
+configuration {
+    modi:                       "drun,window";
+    show-icons: true;
+    display-drun: "apps";
+}
+
+listview {
+    columns: 1;
+    lines: 7;
+    fixed-height: true;
+    fixed-columns: true;
+    cycle: false;
+    scrollbar: true;
+    border: 2px solid;
+    border-color: @b-color;
+    padding: 2px 0px 0px;
+}
+
+window {
+    transparency: "real";
+    width: 450px;
+    border-radius: @b-radius;
+    background-color: @wbg-color;
+    border: @w-border;
+    border-color: @w-border-color;
+    padding: @w-padding;
+}
+
+prompt {
+    text-color: @fg-color;
+}
+
+inputbar {
+    children: ["prompt", "entry"];
+    spacing: @g-spacing;
+}
+
+entry {
+    placeholder: "Search Apps";
+    text-color: @fg-color;
+    placeholder-color: @fgp-color;
+}
+
+mainbox {
+    spacing: @g-spacing;
+    margin: @g-margin;
+    padding: @g-padding;
+    children: ["inputbar", "listview", "message"];
+}
+
+element {
+    spacing: @g-spacing;
+    margin: @g-margin;
+    padding: @g-padding;
+    border: 0px solid;
+    border-radius: @b-radius;
+    border-color: @b-color;
+    background-color: transparent;
+    text-color: @fg-color;
+}
+
+element normal.normal {
+    background-color: @background;
+    text-color: @foreground;
+}
+
+element alternate.normal {
+    background-color: @background;
+    text-color: @foreground;
+}
+
+element selected.active {
+    background-color: @selected-active-background;
+    text-color: @selected-active-foreground;
+}
+
+element selected.normal {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+}
+
+message {
+    background-color: red;
+    border: 0px solid;
+}
