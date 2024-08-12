@@ -58,6 +58,17 @@ if [ -n "$SELECTED_WALLPAPER" ]; then
     # Сохранение цвета в файл для использования в конфигурации Hyprland
     echo "\$border_color_active=$COLOR3_HEX_NO_HASH" > /home/tatu/.config/hypr/color_active_border
     echo "Saved active border color to /home/tatu/.config/hypr/color_active_border"
+
+    # Создание конфигурации для Rofi
+    echo "* {
+    active-background: $COLOR3_HEX;
+}" > /home/tatu/.config/rofi/color.rasi
+
+    echo "Saved Rofi configuration to /home/tatu/.config/rofi/color.rasi"
+
+    # Обновление Pywalfox
+    pywalfox update
+
     echo "All operations completed successfully."
 else
     echo "No wallpaper selected or failed to get wallpaper path from waypaper."
