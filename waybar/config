@@ -6,7 +6,7 @@
     "margin-right": 10,
     "height": 30,
     "spacing": 0,
-    "modules-left": ["custom/launcher", "hyprland/workspaces", "cpu", "memory"],
+    "modules-left": ["custom/launcher", "hyprland/workspaces",  "memory"],
     "modules-center": ["custom/song_name", "custom/pre", "custom/spotify", "custom/next"],
     "modules-right": ["tray", "network", "pulseaudio", "clock", "hyprland/language"],
     
@@ -14,17 +14,17 @@
     "on-click": "activate",
     "format": "{icon}",
     "format-icons": {
-        "default": "",
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "active": "󱓻",
+        "default": "",
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "active": "",
         "urgent": "󱓻"
     },
        "persistent-workspaces": {
-             "HDMI-A-1": [1,2,3,4], // but only three on HDMI-A-1
-             "HDMI-A-2": [5]
+             "HDMI-A-1": [1,2,3,4,5], // but only three on HDMI-A-1
+             "HDMI-A-2": [1,2,3,4,5]
        }
 },
         
@@ -102,7 +102,7 @@
         "scroll-step": 5
     },
     "custom/launcher": {
-        "format": "  ",
+        "format": " 󰐥 ",
         "tooltip": false,
         "on-click": "/home/tatu/.config/waybar/scripts/random_wallpaper.sh"
     },
