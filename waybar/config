@@ -104,7 +104,7 @@
     "custom/launcher": {
         "format": " 󰐥 ",
         "tooltip": false,
-        "on-click": "/home/tatu/.config/waybar/scripts/random_wallpaper.sh"
+        "on-click": "poweroff"
     },
     "custom/next": {
         "exec": "python3 ~/.config/waybar/scripts/next.py --player spotify",
