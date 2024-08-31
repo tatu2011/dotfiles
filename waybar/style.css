@@ -69,10 +69,10 @@ window#waybar.hidden {
   color: #ffffff;
   background-color: @color3;
   font-family: JetBrainsMono Nerd Font;
-  font-size: 18px;
+  font-size: 19px;
   margin: 10px;
   min-width: 45px;
-  padding:  4 10 3 5 ;
+  padding:  6 6 5 6 ; /*вверх право низ влево  */
   border-radius: 15px;
   
 }
@@ -114,12 +114,12 @@ window#waybar.hidden {
   background-color: @color9;
   color: #ffffff;
   font-family: Iosevka Nerd Font;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: bold;
   margin: 10px;
   border-radius: 15px;
   padding-left: 1px; 
-  min-width: 25px;
+  min-width: 35px;
   padding-right: 1px; 
 }
 
