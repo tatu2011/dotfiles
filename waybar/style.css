@@ -1,0 +1,319 @@
+@import "/home/tatu/.cache/wal/colors-waybar.css";
+
+* {
+  font-family: Material Design Icons, JetBrainsMono Nerd Font, Iosevka Nerd Font;
+  font-size: 14px;
+}
+
+window#waybar {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: transparent;
+  border-style: solid;
+}
+
+window#waybar.hidden {
+  opacity: 0.1;
+}
+
+/* Индивидуальные стили для каждого компонента */
+
+/* Рабочие пространства */
+#workspaces {
+  background-color: @color5;
+  color: #ffffff;
+  padding: 1px;
+  margin: 10px;
+  font-size: 15px;
+  border-radius: 15px;
+
+}
+
+/* Кнопки рабочих пространств */
+#workspaces button {
+  border: none;
+  color: #ffffff;
+  padding: 5px;
+  background: transparent;
+  min-width:30px;
+  box-shadow: none;
+}
+
+#workspaces button.active {
+  color: #7f7f7f;
+  background: transparent;
+  animation: button_activate 0.2s ease-in-out;
+}
+
+#workspaces button.urgent {
+  color: #ffffff;	
+  background: transparent;
+}
+
+#workspaces button.persistent {
+  color: #ffffff;
+}
+
+#workspaces button:hover {
+  border: none;
+  background: transparent;
+}
+
+#workspaces button.active:hover, #workspaces button.urgent:hover {
+  background: transparent;
+}
+
+
+/* Custom Launcher */
+#custom-launcher {                    
+  color: #ffffff;
+  background-color: @color3;
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 19px;
+  margin: 10px;
+  min-width: 45px;
+  padding:  6 6 5 6 ; /*вверх право низ влево  */
+  border-radius: 15px;
+  
+}
+
+/* Custom IBus */
+#custom-ibus { 
+  background-color: @color10;
+  font-size: 16px;
+  color: #d1cfcf;
+  font-family: sourcecodepro;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-left: 0px;
+}
+
+/* Clock */
+#clock {
+  color: #ffffff;
+  background-color: @color10;
+  font-family: Iosevka Nerd Font;
+  font-size: 17px;
+  padding:  0 3 0 0 ; /*вверх право низ влево  */
+  font-weight: bold;
+  margin: 10px;
+  border-radius:15px;
+}
+
+#memory {
+  color: #ffffff;
+  background-color: @color10;
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 15px;
+  margin: 10px;
+  border-radius: 15px;
+  
+}
+
+/* Language */
+#language {
+  background-color: @color9;
+  color: #ffffff;
+  font-family: Iosevka Nerd Font;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px;
+  border-radius: 15px;
+  padding-left: 1px; 
+  min-width: 35px;
+  padding-right: 1px; 
+}
+
+/* Custom Media */
+#custom-media {
+  background-color: @color8;
+  color: #ffffff;
+  font-size: 17px;
+  border-radius: 8px;
+  padding: 6.5px;
+  margin: 10px;
+}
+
+/* Tray */
+#tray {
+  color: #ffffff;
+  background-color: @color7;
+  margin: 10px;
+  font-size: 30px;
+  border-radius: 15px;
+  padding-left: 10px; 
+  padding-right: 10px
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #eb4d4b;
+}
+
+/* PulseAudio */
+#pulseaudio {
+  background-color: @color6;
+  color: #ffffff;
+  padding-left: 10px;
+  margin: 10px;
+  font-size: 25px;
+  border-radius: 0px 15px 15px 0px;
+  margin-left: -7px;
+  min-width: 50px;
+}
+#pulseaudio.muted {
+  color: #fb958b;
+}
+
+/* Network */
+#network {
+  background-color: @color6;
+  color: #ffffff;
+  padding-left: 10px;
+  margin: 10px;
+  font-size: 18px;
+  border-radius: 15px 0px 0px 15px; 
+  margin-right: 5px; 
+}
+
+
+
+#network.disconnected {
+  color: #fb958b;
+}
+
+/* Battery */
+#battery {
+  background-color: @color4;
+  color: #8fbcbb;
+  border-radius: 0px 8px 8px 0px;
+  padding-right: 2px;
+  font-size: 22px;
+}
+
+#battery.critical,
+#battery.warning,
+#battery.full,
+#battery.plugged {
+  color: #8fbcbb;
+  padding-left: 6px;
+  padding-right: 12px;
+  font-size: 22px;
+}
+
+#battery.charging { 
+  font-size: 18px;
+  padding-right: 13px;
+  padding-left: 4px;
+}
+
+#battery.full,
+#battery.plugged {
+  font-size: 22.5px;
+  padding-right: 10px;
+}
+
+#battery.warning {
+  color: #ecd3a0;
+}
+
+#battery.critical:not(.charging) {
+  color: #fb958b;
+}
+
+/* Custom Lock */
+#custom-lock {
+  background-color: @color3;
+  color: #ecd3a0;
+  padding: 0 15px;
+  margin: 7px;
+}
+
+/* Custom Spotify Elements */
+#custom-song_name,
+#custom-spotify,
+#custom-next,
+#custom-pre {
+  background-color: @color1;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  padding-right: 6.5px;
+  min-width: 28px;
+  margin: 10px;
+  margin-left: 5px;
+}
+
+#custom-pre {
+  border-radius: 0px 0px 0px 0px; 
+  padding-left: 10px;
+  margin-left: -15px;
+}
+
+#custom-next {
+  border-radius: 0px 15px 15px 0px; 
+  margin-left: -5px;
+  padding-right: 15px;
+}
+
+#custom-spotify {
+  margin-right: 0px;
+  margin-left: -12px;
+  padding-left: 10px;
+  border-radius: 0px ;
+}
+
+#custom-song_name {
+  font-size: 17px;
+  padding-right: 10px;
+  border-radius: 15px 0px 0px 15px; 
+  margin-right: 10px;
+  padding-left: 10px;
+}
+
+
+
+/* Tooltip */
+tooltip {
+  font-family: Iosevka Nerd Font;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #242933;
+}
+
+tooltip label {
+  font-family: Iosevka Nerd Font;
+  padding: 5px;
+  background-color: #242933;
+}
+
+label:focus {
+  background-color: #242933;
+}
+
+/* Idle Inhibitor */
+#idle_inhibitor {
+  background-color: #242933;
+}
+
+#idle_inhibitor.activated {
+  background-color: #ecf0f1;
+  color: #2d3436;
+}
+
+/* Keyframe Animations */
+@keyframes button_activate {
+  from { opacity: .3 }
+  to { opacity: 1; }
+}
+
+@keyframes blink {
+  to {
+    background-color: rgba(30, 34, 42, 0.5);
+    color: #abb2bf;
+  }
+}
